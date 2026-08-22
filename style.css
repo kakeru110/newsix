@@ -38,6 +38,31 @@ body {
   margin: 0 auto;
 }
 
+.site-nav {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-bottom: 2.5rem;
+  font-size: 0.85rem;
+}
+
+.site-nav a {
+  color: var(--ink-muted);
+  text-decoration: none;
+  padding-bottom: 0.3rem;
+  border-bottom: 2px solid transparent;
+}
+
+.site-nav a:hover {
+  color: var(--ink);
+}
+
+.site-nav a.active {
+  color: var(--ink);
+  border-bottom-color: var(--accent);
+  font-weight: 700;
+}
+
 .hero {
   text-align: center;
   margin-bottom: 3rem;
@@ -131,4 +156,105 @@ body {
   text-align: center;
   font-size: 0.8rem;
   color: var(--ink-muted);
+}
+
+.prose {
+  display: grid;
+  gap: 1.75rem;
+}
+
+.prose-section h2 {
+  margin: 0 0 0.6rem;
+  font-size: 1.15rem;
+  font-weight: 700;
+}
+
+.prose-section p {
+  margin: 0;
+  color: var(--ink-muted);
+  font-size: 0.95rem;
+}
+
+.contact-layout {
+  display: grid;
+  gap: 1.25rem;
+  max-width: 480px;
+  margin: 0 auto;
+}
+
+.panel {
+  background: var(--surface);
+  border: 1px solid var(--rule);
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 8px 24px -18px var(--shadow);
+}
+
+.contact-form {
+  display: grid;
+  gap: 1.1rem;
+}
+
+.contact-field {
+  display: grid;
+  gap: 0.4rem;
+  font-size: 0.85rem;
+  color: var(--ink-muted);
+}
+
+.contact-field input,
+.contact-field textarea {
+  font: inherit;
+  color: var(--ink);
+  background: var(--bg);
+  border: 1px solid var(--rule);
+  border-radius: 8px;
+  padding: 0.65rem 0.8rem;
+  resize: vertical;
+}
+
+.contact-field input:focus,
+.contact-field textarea:focus {
+  outline: none;
+  border-color: var(--accent);
+}
+
+.contact-required {
+  color: var(--accent);
+  font-size: 0.7rem;
+  margin-left: 0.4rem;
+}
+
+.contact-submit {
+  justify-self: start;
+  font: inherit;
+  font-weight: 700;
+  color: #fff;
+  background: var(--accent);
+  border: none;
+  border-radius: 8px;
+  padding: 0.7rem 1.6rem;
+  cursor: pointer;
+}
+
+.contact-submit:hover {
+  opacity: 0.9;
+}
+
+.contact-sent {
+  text-align: center;
+  padding: 0.9rem;
+  border-radius: 8px;
+  background: var(--surface);
+  border: 1px solid var(--accent);
+  color: var(--accent);
+  font-weight: 700;
+  font-size: 0.9rem;
+}
+
+.contact-disclaimer {
+  margin: 0;
+  font-size: 0.78rem;
+  color: var(--ink-muted);
+  text-align: center;
 }
