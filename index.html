@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>サイト一覧 | kakeru110</title>
+<meta name="description" content="個人で運営しているWebサイト・ツールをまとめたポータルページです。">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="page">
+
+  <header class="hero">
+    <p class="eyebrow">SITE INDEX</p>
+    <h1>つくったサイトたち</h1>
+    <p class="lead">個人で作っている、いろいろなWebサイト・ツールの一覧です。気になるものがあれば覗いてみてください。</p>
+  </header>
+
+  <main class="grid">
+
+    <a class="card" href="https://tokyo-bay-fishing.com/" target="_blank" rel="noopener">
+      <div class="card-body">
+        <p class="card-tag">釣り・データ</p>
+        <h2 class="card-title">東京湾 船釣り釣果マップ</h2>
+        <p class="card-desc">東京湾の船釣りについて、各船宿の公開情報をもとに魚種別・船宿別の最新釣果データを集計・可視化するサイトです。</p>
+      </div>
+      <span class="card-arrow" aria-hidden="true">&rarr;</span>
+    </a>
+
+    <a class="card" href="https://kakeru110.github.io/hello-first-pr/" target="_blank" rel="noopener">
+      <div class="card-body">
+        <p class="card-tag">筋トレ・記録</p>
+        <h2 class="card-title">SIGNAL - 筋トレ記録</h2>
+        <p class="card-desc">種目・重量・回数を記録してグラフで進捗を確認できる、体重管理機能とGitHub同期にも対応した筋トレ記録アプリです。</p>
+      </div>
+      <span class="card-arrow" aria-hidden="true">&rarr;</span>
+    </a>
+
+    <a class="card" href="https://shugo-eki.com/" target="_blank" rel="noopener">
+      <div class="card-body">
+        <p class="card-tag">便利ツール</p>
+        <h2 class="card-title">集合駅ナビ</h2>
+        <p class="card-desc">最寄駅（と勤務地）を入力するだけで、距離・公平性・到着時間の観点から公平に集まれる駅を提案してくれる無料ツールです。</p>
+      </div>
+      <span class="card-arrow" aria-hidden="true">&rarr;</span>
+    </a>
+
+    <a class="card" href="https://claude.ai/code/artifact/e2716940-e8df-4a88-83cc-0d38ef6b80b4" target="_blank" rel="noopener">
+      <div class="card-body">
+        <p class="card-tag">診断・お遊び</p>
+        <h2 class="card-title">婚活市場価値 査定書</h2>
+        <p class="card-desc">いくつかの項目を入力すると、婚活市場での立ち位置を査定書ふうにまとめて見せてくれる診断コンテンツです。</p>
+      </div>
+      <span class="card-arrow" aria-hidden="true">&rarr;</span>
+    </a>
+
+    <a class="card" href="https://kakeru110.github.io/newthree/" target="_blank" rel="noopener">
+      <div class="card-body">
+        <p class="card-tag">統計・社会</p>
+        <h2 class="card-title">統計読解室</h2>
+        <p class="card-desc">総務省や厚労省などが公表する統計データを、年齢調整や集計方法の違いなどの前提を踏まえて検証・可視化する個人運営サイトです。</p>
+      </div>
+      <span class="card-arrow" aria-hidden="true">&rarr;</span>
+    </a>
+
+  </main>
+
+  <footer class="footer">
+    <p>&copy; <span id="year"></span> kakeru110</p>
+  </footer>
+
+</div>
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+</body>
+</html>
