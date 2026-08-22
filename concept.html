@@ -5,19 +5,25 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>コンセプト | kakeru110</title>
 <meta name="description" content="世の中になさそうな、あったら便利なサイトを個人で作っているコンセプトについて。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DotGothic16&family=Stick&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
 <div class="page">
 
-  <nav class="site-nav">
-    <a href="index.html">サイト一覧</a>
-    <a href="concept.html" class="active">コンセプト</a>
-    <a href="contact.html">お問い合わせ</a>
-  </nav>
+  <div class="topline">
+    <span class="brand mono">KAKERU<span class="accent">110</span> / CATALOG</span>
+    <nav class="site-nav">
+      <a href="index.html">INDEX</a>
+      <a href="concept.html" class="active">CONCEPT</a>
+      <a href="contact.html">CONTACT</a>
+    </nav>
+  </div>
 
   <header class="hero">
-    <p class="eyebrow">CONCEPT</p>
+    <p class="eyebrow mono">ABOUT THIS CATALOG</p>
     <h1>コンセプト</h1>
     <p class="lead">世の中に「なさそう」で、あったら地味に便利なものを作っています。</p>
   </header>
@@ -25,7 +31,8 @@
   <main class="prose">
 
     <section class="prose-section">
-      <h2>作っているもの</h2>
+      <p class="num">01 — 作っているもの</p>
+      <h2>共通しているのは「自分がほしい形」</h2>
       <p>
         釣果データの可視化、筋トレの記録、集まる駅を決めるツール、統計データの検証サイトなど、
         ジャンルはバラバラですが、共通しているのは「探せば似たものはあるかもしれないけど、
@@ -34,29 +41,33 @@
     </section>
 
     <section class="prose-section">
+      <p class="num">02 — 作り方</p>
       <h2>大きくしない、たくさん作る</h2>
       <p>
         1つのサービスを大きく育てるより、気になったことをその都度小さなサイトにして公開する
         スタイルで運営しています。完璧を目指すより、まず形にして公開することを優先しています。
-        そのため誤りや至らない点があれば、下記の「お問い合わせ」から教えていただけると助かります。
+        そのため誤りや至らない点があれば、お問い合わせから教えていただけると助かります。
       </p>
     </section>
 
     <section class="prose-section">
-      <h2>このページについて</h2>
+      <p class="num">03 — このカタログ</p>
+      <h2>随時、番号が増えていきます</h2>
       <p>
         このサイトはそうした個人サイト・ツールをまとめて紹介する「姉妹サイト集」です。
-        新しいサイトができたら、随時こちらの一覧に追加していきます。
+        新しいサイトができたら、随時こちらの一覧に PN 番号を振って追加していきます。
       </p>
     </section>
 
   </main>
 
-  <footer class="footer">
-    <p>&copy; <span id="year"></span> kakeru110</p>
+  <footer class="page-footer">
+    <span>KAKERU110 CATALOG</span>
+    <span>ISSUE <span id="year"></span></span>
   </footer>
 
 </div>
+<script src="cursor.js"></script>
 <script>
   document.getElementById('year').textContent = new Date().getFullYear();
 </script>

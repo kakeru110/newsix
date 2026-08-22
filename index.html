@@ -5,77 +5,73 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>サイト一覧 | kakeru110</title>
 <meta name="description" content="個人で運営しているWebサイト・ツールをまとめたポータルページです。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DotGothic16&family=Stick&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
 <div class="page">
 
-  <nav class="site-nav">
-    <a href="index.html" class="active">サイト一覧</a>
-    <a href="concept.html">コンセプト</a>
-    <a href="contact.html">お問い合わせ</a>
-  </nav>
+  <div class="topline">
+    <span class="brand mono">KAKERU<span class="accent">110</span> / CATALOG</span>
+    <nav class="site-nav">
+      <a href="index.html" class="active">INDEX</a>
+      <a href="concept.html">CONCEPT</a>
+      <a href="contact.html">CONTACT</a>
+    </nav>
+  </div>
 
   <header class="hero">
-    <p class="eyebrow">SITE INDEX</p>
+    <p class="eyebrow mono">05 ITEMS CATALOGUED</p>
     <h1>つくったサイトたち</h1>
-    <p class="lead">個人で作っている、いろいろなWebサイト・ツールの一覧です。気になるものがあれば覗いてみてください。</p>
+    <p class="lead">世の中に「なさそう」で、あったら地味に便利なものを、ひとつずつ番号を振って公開している。</p>
   </header>
 
-  <main class="grid">
+  <div class="catalog-head">
+    <span>PART NO.</span><span>NAME</span><span>CATEGORY</span><span></span>
+  </div>
 
-    <a class="card" href="https://tokyo-bay-fishing.com/" target="_blank" rel="noopener">
-      <div class="card-body">
-        <p class="card-tag">釣り・データ</p>
-        <h2 class="card-title">東京湾 船釣り釣果マップ</h2>
-        <p class="card-desc">東京湾の船釣りについて、各船宿の公開情報をもとに魚種別・船宿別の最新釣果データを集計・可視化するサイトです。</p>
-      </div>
-      <span class="card-arrow" aria-hidden="true">&rarr;</span>
+  <div class="entries">
+    <a class="entry" href="https://tokyo-bay-fishing.com/" target="_blank" rel="noopener">
+      <span class="pn">PN-001</span>
+      <div><h2>東京湾 船釣り釣果マップ</h2><p>船宿別・魚種別の最新釣果データを集計・可視化するサイトです。</p></div>
+      <span class="cat">釣り・データ</span>
+      <span class="state">LIVE</span>
     </a>
-
-    <a class="card" href="https://kakeru110.github.io/hello-first-pr/" target="_blank" rel="noopener">
-      <div class="card-body">
-        <p class="card-tag">筋トレ・記録</p>
-        <h2 class="card-title">SIGNAL - 筋トレ記録</h2>
-        <p class="card-desc">種目・重量・回数を記録してグラフで進捗を確認できる、体重管理機能とGitHub同期にも対応した筋トレ記録アプリです。</p>
-      </div>
-      <span class="card-arrow" aria-hidden="true">&rarr;</span>
+    <a class="entry" href="https://kakeru110.github.io/hello-first-pr/" target="_blank" rel="noopener">
+      <span class="pn">PN-002</span>
+      <div><h2>SIGNAL — 筋トレ記録</h2><p>種目・重量・回数を記録してグラフで進捗を確認できる筋トレ記録アプリです。</p></div>
+      <span class="cat">筋トレ</span>
+      <span class="state">LIVE</span>
     </a>
-
-    <a class="card" href="https://shugo-eki.com/" target="_blank" rel="noopener">
-      <div class="card-body">
-        <p class="card-tag">便利ツール</p>
-        <h2 class="card-title">集合駅ナビ</h2>
-        <p class="card-desc">最寄駅（と勤務地）を入力するだけで、距離・公平性・到着時間の観点から公平に集まれる駅を提案してくれる無料ツールです。</p>
-      </div>
-      <span class="card-arrow" aria-hidden="true">&rarr;</span>
+    <a class="entry" href="https://shugo-eki.com/" target="_blank" rel="noopener">
+      <span class="pn">PN-003</span>
+      <div><h2>集合駅ナビ</h2><p>最寄駅を入力するだけで、公平に集まれる駅を提案してくれる無料ツールです。</p></div>
+      <span class="cat">便利ツール</span>
+      <span class="state">LIVE</span>
     </a>
-
-    <a class="card" href="https://claude.ai/code/artifact/e2716940-e8df-4a88-83cc-0d38ef6b80b4" target="_blank" rel="noopener">
-      <div class="card-body">
-        <p class="card-tag">診断・お遊び</p>
-        <h2 class="card-title">婚活市場価値 査定書</h2>
-        <p class="card-desc">いくつかの項目を入力すると、婚活市場での立ち位置を査定書ふうにまとめて見せてくれる診断コンテンツです。</p>
-      </div>
-      <span class="card-arrow" aria-hidden="true">&rarr;</span>
+    <a class="entry" href="https://claude.ai/code/artifact/e2716940-e8df-4a88-83cc-0d38ef6b80b4" target="_blank" rel="noopener">
+      <span class="pn">PN-004</span>
+      <div><h2>婚活市場価値 査定書</h2><p>いくつかの項目を入力すると、査定書ふうに立ち位置を見せてくれる診断コンテンツです。</p></div>
+      <span class="cat">診断</span>
+      <span class="state">LIVE</span>
     </a>
-
-    <a class="card" href="https://kakeru110.github.io/newthree/" target="_blank" rel="noopener">
-      <div class="card-body">
-        <p class="card-tag">統計・社会</p>
-        <h2 class="card-title">統計読解室</h2>
-        <p class="card-desc">総務省や厚労省などが公表する統計データを、年齢調整や集計方法の違いなどの前提を踏まえて検証・可視化する個人運営サイトです。</p>
-      </div>
-      <span class="card-arrow" aria-hidden="true">&rarr;</span>
+    <a class="entry" href="https://kakeru110.github.io/newthree/" target="_blank" rel="noopener">
+      <span class="pn">PN-005</span>
+      <div><h2>統計読解室</h2><p>公的統計を、集計方法の前提を踏まえて検証・可視化する個人運営サイトです。</p></div>
+      <span class="cat">統計</span>
+      <span class="state">LIVE</span>
     </a>
+  </div>
 
-  </main>
-
-  <footer class="footer">
-    <p>&copy; <span id="year"></span> kakeru110</p>
+  <footer class="page-footer">
+    <span>KAKERU110 CATALOG</span>
+    <span>ISSUE <span id="year"></span></span>
   </footer>
 
 </div>
+<script src="cursor.js"></script>
 <script>
   document.getElementById('year').textContent = new Date().getFullYear();
 </script>

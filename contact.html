@@ -5,26 +5,32 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>お問い合わせ | kakeru110</title>
 <meta name="description" content="つくったサイトたちへのご意見・ご感想、掲載の追加依頼などはこちらからお願いします。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DotGothic16&family=Stick&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
 <div class="page">
 
-  <nav class="site-nav">
-    <a href="index.html">サイト一覧</a>
-    <a href="concept.html">コンセプト</a>
-    <a href="contact.html" class="active">お問い合わせ</a>
-  </nav>
+  <div class="topline">
+    <span class="brand mono">KAKERU<span class="accent">110</span> / CATALOG</span>
+    <nav class="site-nav">
+      <a href="index.html">INDEX</a>
+      <a href="concept.html">CONCEPT</a>
+      <a href="contact.html" class="active">CONTACT</a>
+    </nav>
+  </div>
 
   <header class="hero">
-    <p class="eyebrow">CONTACT</p>
+    <p class="eyebrow mono">SEND A MESSAGE</p>
     <h1>お問い合わせ</h1>
     <p class="lead">ご意見・ご感想、掲載の誤りのご指摘、追加してほしいサイトのご要望などをお寄せください。</p>
   </header>
 
   <main class="contact-layout">
 
-    <div id="contactSent" class="contact-sent" hidden>
+    <div id="contactSent" class="contact-sent mono" hidden>
       送信しました。ありがとうございます。
     </div>
 
@@ -64,11 +70,13 @@
 
   </main>
 
-  <footer class="footer">
-    <p>&copy; <span id="year"></span> kakeru110</p>
+  <footer class="page-footer">
+    <span>KAKERU110 CATALOG</span>
+    <span>ISSUE <span id="year"></span></span>
   </footer>
 
 </div>
+<script src="cursor.js"></script>
 <script>
   document.getElementById('year').textContent = new Date().getFullYear();
   if (new URLSearchParams(location.search).get('sent') === '1') {
