@@ -1,0 +1,59 @@
+name: 民泊チェックイン通知
+
+on:
+  schedule:
+    # 5分おき / 06:00-14:55 UTC = 15:00-23:55 JST
+    - cron: '*/5 6-14 * * *'
+  workflow_dispatch:
+    inputs:
+      dry_run:
+        description: 'Slackへの実送信をせずログのみ出力する'
+        type: boolean
+        default: false
+      force:
+        description: '15時前でも実行する(テスト用)'
+        type: boolean
+        default: false
+
+permissions:
+  contents: write
+
+concurrency:
+  group: checkin-notify
+  cancel-in-progress: false
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: チェック実行
+        env:
+          SWITCHBOT_TOKEN: ${{ secrets.SWITCHBOT_TOKEN }}
+          SWITCHBOT_SECRET: ${{ secrets.SWITCHBOT_SECRET }}
+          SWITCHBOT_LOCK_DEVICE_ID: ${{ secrets.SWITCHBOT_LOCK_DEVICE_ID }}
+          WEBIOT_API_KEY: ${{ secrets.WEBIOT_API_KEY }}
+          WEBIOT_SENSOR_ID: ${{ secrets.WEBIOT_SENSOR_ID }}
+          SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
+          CHECKIN_HOUR: ${{ vars.CHECKIN_HOUR }}
+          NOISE_THRESHOLD_DB: ${{ vars.NOISE_THRESHOLD_DB }}
+          DRY_RUN: ${{ inputs.dry_run }}
+          FORCE: ${{ inputs.force }}
+        run: node scripts/checkin-notify.mjs
+
+      - name: 状態の変化をコミット
+        run: |
+          if ! git diff --quiet -- .state/state.json; then
+            git config user.name 'github-actions[bot]'
+            git config user.email 'github-actions[bot]@users.noreply.github.com'
+            git add .state/state.json
+            git commit -m 'chore: update check-in notification state [skip ci]'
+            git push
+          else
+            echo "状態に変化がないためコミットをスキップします。"
+          fi
