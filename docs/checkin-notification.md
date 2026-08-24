@@ -12,12 +12,12 @@ GitHub Actions が5分おき（15:00〜23:55 JST）に `scripts/checkin-notify.m
 
 1. SwitchBotアプリ → プロフィール → 環境設定 → 「App Version」を連続タップ →
    「開発者向けオプション」を開き、Token / Secret を取得する。
-2. 対象ロックのデバイスIDを調べる。
+2. 対象ロックのデバイスIDを調べる。手元のPCで以下を実行する（Node.js 18以上が必要）。
    ```
-   curl "https://api.switch-bot.com/v1.1/devices" -H "Authorization: <TOKEN>" ...
+   SWITCHBOT_TOKEN=<取得したToken> SWITCHBOT_SECRET=<取得したSecret> \
+     node scripts/list-switchbot-devices.mjs
    ```
-   （署名付きリクエストが必要。手元で一度スクリプトを動かして確認するか、
-   参考記事の手順で取得する）
+   デバイス一覧が表示されるので、対象ロックの `deviceId` を控える。
 
 ### 2. ウェビオ (Webiot) 騒音センサー
 
