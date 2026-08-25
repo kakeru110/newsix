@@ -8,9 +8,12 @@ kv_namespaces = [
 ]
 
 # 以下はデプロイ後に `wrangler secret put <NAME>` で設定する(このファイルには書かない):
-#   WEBHOOK_TOKEN        受信URLの推測防止用トークン(自分でランダムな文字列を生成)
+#   WEBHOOK_TOKEN             受信URLの推測防止用トークン(自分でランダムな文字列を生成)
 #   SWITCHBOT_LOCK_DEVICE_ID  対象ロックのdeviceId(=MACアドレス)
-#   SLACK_WEBHOOK_URL     Slack Incoming Webhook URL
+#   SLACK_WEBHOOK_URL         Slack Incoming Webhook URL
+#   BEDS24_REFRESH_TOKEN      Beds24のrefreshToken(scripts/beds24-setup.mjsで取得)
 
 [vars]
 CHECKIN_HOUR = "15"
+# Beds24で複数物件を管理している場合のみ、対象物件のpropertyIdを設定する
+BEDS24_PROPERTY_ID = ""
