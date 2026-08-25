@@ -2,5 +2,5 @@
 
 ## 民泊チェックイン通知
 
-SwitchBotロックの解錠 / ウェビオ騒音センサーを監視し、チェックインを検知したらSlackに通知するGitHub Actionsを追加している。
+SwitchBotロックの解錠をWebhookでリアルタイムに検知し、Cloudflare Workers経由でSlackに通知する仕組みを追加している。
 セットアップ手順は [docs/checkin-notification.md](docs/checkin-notification.md) を参照。
